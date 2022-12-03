@@ -13,7 +13,7 @@ int main()
     }
     cout << endl;
     for (int t = 0; t < k; t++) {
-        for (int z = 0; z < n; z++)
+        for (int z = 0; z < n; z++){
             for (int x = 0; x < m; x++) {
                 int s = 0; 
                 s += l[(z + n - 1) % n][(x + m - 1) % m] == '*';
@@ -27,6 +27,7 @@ int main()
                 if (s < 2 || s>3) l1[z][x] = '.'; 
                 if (s == 3) l1[z][x] = '*'; 
             }
+        }
         for (int z = 0; z < n; z++) l[z] = l1[z]; 
     }
     for (int z = 0; z < n; z++) cout << l[z] << endl; 
